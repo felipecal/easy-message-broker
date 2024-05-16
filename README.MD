@@ -16,7 +16,7 @@
 - #### How to Import:
 
 ```
-import { RabbitMQAdapter } from 'easy-message-broker';
+import { MessageBroker } from 'easy-message-broker';
 ```
 
 - #### How to import and use:
@@ -34,7 +34,7 @@ async function examplePublishMessage() {
   await queue.connect('localhost');
   await queue.createQueue('testeQueue')
   await queue.createExchange('testExchange');
-  await queue.bindQueueToExchange('testeQueue', 'TestExchange');
+  await queue.bindQueueToExchange('testeQueue', 'testExchange');
   await queue.publishMessage('testExchange', '', 'textMessage')
 }
 ```
