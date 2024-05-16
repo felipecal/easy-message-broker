@@ -1,6 +1,6 @@
 {
-  "name": "easy-queue",
-  "version": "1.0.0",
+  "name": "easy-message-broker",
+  "version": "1.0.1",
   "description": "An easier way to use message broker.",
   "main": "dist/main_api.js",
   "author": "Felipe <fcalldas@gmail.com>",
