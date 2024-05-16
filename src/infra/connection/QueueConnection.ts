@@ -1,9 +1,9 @@
 import amqp from 'amqplib';
 
 export default class QueueConnection {
-  constructor(url: string){}
+  constructor(private url: string){}
 
-  async connect(url: string): Promise<void> {
-    await amqp.connect(`amqp://${url}`);
+  async connect(): Promise<void> {
+    await amqp.connect(`amqp://${this.url}`);
   }
 }
