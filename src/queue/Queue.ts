@@ -1,6 +1,6 @@
 import amqp from 'amqplib';
 
-export class RabbitMQAdapter {
+export class MessageBroker {
   private connection: any;
 
   async connect(url: string): Promise<void> {

@@ -1,5 +1,5 @@
-import { RabbitMQAdapter } from "./queue/Queue";
+import { MessageBroker } from "./queue/Queue";
 
 export {
-  RabbitMQAdapter
+  MessageBroker
 }
