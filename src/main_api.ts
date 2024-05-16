@@ -1,5 +1,5 @@
-import Queue from "./queue/Queue";
+import { RabbitMQAdapter } from "./queue/Queue";
 
 export {
-  Queue
+  RabbitMQAdapter
 }
