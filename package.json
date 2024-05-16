@@ -1,12 +1,12 @@
 {
   "name": "test-calcalcals",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "A simple lib test",
   "main": "dist/main_api.js",
   "author": "Felipe <fcalldas@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "tsc && cp ./package.json ./dist/package.json"
+    "build": "tsc"
   },
   "dependencies": {
     "amqplib": "^0.10.4",
