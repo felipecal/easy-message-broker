@@ -75,7 +75,7 @@ export class MessageBroker {
       channel.consume(queueName, function (msg: any) {
         const input = JSON.parse(msg.content.toString());
         console.log(input);
-        // channel.ack(msg);
+        channel.ack(msg);
       });
     } catch (error) {
       throw new Error('Error consuming queue: ' + error);
