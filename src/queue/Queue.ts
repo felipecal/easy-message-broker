@@ -1,15 +1,6 @@
 import amqp from 'amqplib';
 
-export default interface Queue {
-  connect(url: string): Promise<void>;
-  createExchange(queueName: string, exchangeType: string, durable: boolean): Promise<void>;
-  createQueue(queueName: string, durable: boolean): Promise<void>;
-  bindQueueToExchange(queueName: string, exchangeName: string, routingKey: string): Promise<void>;
-  publishMessage(exchangeName: string, routingKey: string, data: any): Promise<void>;
-  consumeQueue(queueName: string): Promise<any>;
-}
-
-export class RabbitMQAdapter implements Queue {
+export class RabbitMQAdapter {
   private connection: any;
 
   async connect(url: string): Promise<void> {
