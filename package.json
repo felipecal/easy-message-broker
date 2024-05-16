@@ -1,7 +1,11 @@
 {
   "name": "easy-message-broker",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "An easier way to use message broker.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/felipecal/easy-message-broker.git"
+  },
   "main": "dist/main_api.js",
   "author": "Felipe <fcalldas@gmail.com>",
   "license": "MIT",
