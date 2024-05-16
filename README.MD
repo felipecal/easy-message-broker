@@ -1,4 +1,3 @@
-
 #  Easy Queue 
 
 - The easy-message-broker library is an HTTP messaging solution designed to simplify and expedite the message exchange process, offering a straightforward and user-friendly approach for users. With the aim of making messaging integration an accessible and efficient task, the easy-message-broker library employs the AMQP (Advanced Message Queuing Protocol) protocol to provide a robust and reliable infrastructure.
