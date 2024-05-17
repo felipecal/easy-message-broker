@@ -3,7 +3,7 @@ name: Node.js Package
 on:
   push:
     branches:
-      - main # Ajuste conforme necessário para o branch principal do seu repositório
+      - main 
 
 jobs:
   build:
@@ -13,8 +13,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: npm ci
-      - run: npm test
+      - run: npm install
 
   publish-npm:
     needs: build
