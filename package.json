@@ -1,6 +1,6 @@
 {
   "name": "easy-message-broker",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "An easier way to use message broker.",
   "repository": {
     "type": "git",
