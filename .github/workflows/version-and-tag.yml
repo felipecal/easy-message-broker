@@ -1,0 +1,25 @@
+name: Create Version and Tag
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  version-and-tag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: |
+          git config --global user.email "fcalldas@gmail.com"
+          git config --global user.name "Felipe Caldas"
+      - run: |
+          npm version patch -m "Upgrade to %s"
+          git push --follow-tags
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
