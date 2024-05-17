@@ -3,7 +3,7 @@ name: Node.js Package
 on:
   push:
     branches:
-      - main 
+      - main
 
 jobs:
   publish-npm:
@@ -17,18 +17,9 @@ jobs:
       - run: |
           git config --global user.email "fcalldas@gmail.com"
           git config --global user.name "Felipe Caldas"
-          git add .
-          git commit -m "Pre-version commit"
       - run: |
           npm version patch -m "Upgrade to %s"
           git push --follow-tags
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - name: Push updated version
-        run: |
-          git config --global user.email "fcalldas@gmail.com"
-          git config --global user.name "Felipe Caldas"
-          git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
