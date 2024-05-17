@@ -20,6 +20,7 @@ jobs:
           git config --global user.name "Felipe Caldas"
       - run: |
           npm version patch -m "Upgrade to %s"
+          git remote set-url origin https://x-access-token:${{ secrets.PAT }}@github.com/felipecal/easy-message-broker.git
           git push --follow-tags
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT }}
