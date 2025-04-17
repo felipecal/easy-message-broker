@@ -1,5 +1,15 @@
-import { MessageBroker } from "./queue/Queue";
+import {
+  MessageBroker,
+  ConnectionOptions,
+  QueueOptions,
+  ExchangeOptions,
+  PublishOptions,
+} from "./queue/MessageBroker";
 
 export {
-  MessageBroker
-}
+  MessageBroker,
+  ConnectionOptions,
+  QueueOptions,
+  ExchangeOptions,
+  PublishOptions,
+};
